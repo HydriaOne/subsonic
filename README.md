@@ -1,2 +1,2 @@
-# dockersonic
+# DockerSonic
 Docker Automated build test
