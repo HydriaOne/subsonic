@@ -8,9 +8,7 @@ Create the data container with:
 
 sudo docker run --name subsonic_data \
     -v /data/music:/var/music \
-    emauve/subsonic:6.0 /bin/true
-
-    In this example, the actual music files are managed in the /data/music.
+    hydria/subsonic:6.0 /bin/true
 
     Data container manages only the subsonic configuration information.
 
@@ -20,7 +18,7 @@ sudo docker run -d -t -i \
     --publish 8100:4040 \
     --name="subsonic_app" \
     --volumes-from subsonic_data \
-    emauve/subsonic:6.0
+    hydria/subsonic:6.0
 
     In this example, we specify port 4040 to 8100.
 
