@@ -7,7 +7,8 @@ RUN apt-get update
 RUN apt-get install ffmpeg libav-tools openjdk-8-jre-headless nano flac lame wget -y
 RUN mkdir -p /opt/subsonic
 RUN wget -qO- https://s3-eu-west-1.amazonaws.com/subsonic-public/download/subsonic-6.1.beta1-standalone.tar.gz | tar xvz -C /opt/subsonic
-ENV LANG en_US.UTF-8 ENV LC_ALL en_US.UTF-8 VOLUME ["/var/music", "/var/subsonic"]
+ENV LANG en_US.UTF-8 ENV LC_ALL en_US.UTF-8 
+VOLUME ["/var/music", "/var/subsonic"]
 CMD /bin/bash -c "export LANG=en_US.UTF-8 && /opt/subsonic/subsonic.sh && /bin/bash"
 RUN mkdir -p /var/subsonic/transcode && \
 cd /var/subsonic/transcode && \
