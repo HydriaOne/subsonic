@@ -1,6 +1,6 @@
-### Dockersonic
+### Subsonic
 
-Dockerfile for Subsonic 6 with FFMPEG
+Dockerfile for Subsonic 6.1 with FFMPEG
 
 Usage
 
@@ -8,7 +8,7 @@ Create the data container with:
 
     sudo docker run --name subsonic_data \
     -v /data/music:/var/music \
-    hydria/subsonic:6.0 /bin/true
+    hydria/subsonic:latest /bin/true
 
 Data container manages only the subsonic configuration information.
 
@@ -18,7 +18,7 @@ After crerateing this run subsonic_app:
         --publish 8100:4040 \
         --name="subsonic_app" \
         --volumes-from subsonic_data \
-        hydria/subsonic:6.0
+        hydria/subsonic:latest
 
 In this example, we specify port 4040 to 8100.
 
