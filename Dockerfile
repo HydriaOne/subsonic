@@ -1,4 +1,4 @@
-#Subsonic StandAlone Docker Image
+#Subsonic StandAlone Docker Image v6.1.3
 FROM ubuntu:16.04
 MAINTAINER Hydria
 
