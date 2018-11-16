@@ -9,7 +9,7 @@ RUN echo "Subsonic StandAlone Docker Image With FFMPEG (v6.0)"
 RUN apt-get update
 RUN apt-get install locales ffmpeg libav-tools openjdk-8-jre-headless nano flac lame wget -y
 RUN mkdir -p /opt/subsonic && locale-gen "en_US.UTF-8"
-RUN wget -qO- https://s3-eu-west-1.amazonaws.com/subsonic-public/download/subsonic-6.1.3-standalone.tar.gz | tar xvz -C /opt/subsonic
+RUN wget -qO- https://s3-eu-west-1.amazonaws.com/subsonic-public/download/subsonic-6.1.4-standalone.tar.gz | tar xvz -C /opt/subsonic
 RUN mkdir -p /var/subsonic/transcode && \
 cd /var/subsonic/transcode && \
 ln -s "$(which ffmpeg)"
