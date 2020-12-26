@@ -1,6 +1,6 @@
 ### Subsonic
 
-Dockerfile for Subsonic 6.1.5 with FFMPEG
+Dockerfile for Subsonic 6.1.6 with FFMPEG
 
 Usage
 
